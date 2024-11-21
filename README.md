@@ -1,2 +1,8 @@
-# npth-dsl-spec
-Nam-Pore-Thik-Hobe DSL Specification
+# NPTH DSL spec
+The simplest NPTH script that can written may look like this
+
+```
+MyRect : Rectangle
+```
+
+This draws a Rectangle.
