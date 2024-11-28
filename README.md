@@ -5,7 +5,7 @@ The simplest NPTH script that can be written may look like this
 MyRect : create Rectangle
 ```
 
-First it need to write the parser rules for the grammar. Here the grammar starts with `program`. Here `program` is the startRuleName.
+First it needs to write the parser rules for the grammar. Here the grammar starts with `program`. Here `program` is the startRuleName.
 The parser rule is following bellow:
 
 ````
@@ -23,6 +23,7 @@ ACTION      : 'create' |'delete' | 'move';
 SHAPE       : 'Rectangle' | 'Circle' | 'Square' | 'Elipse' | 'Diamond';  
 WS          : [ \t\r\n]+ -> skip; 
 ````
+>The lexer rules will tokenize the DSL and generate a stream of tokens. The token stream will go to the parser, and they will match the grammar that are defined in the parse rules and make a parse tree if all the syntax are correct.
 
 Lastly, the general syntax will be :
 
