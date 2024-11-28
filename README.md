@@ -5,13 +5,26 @@ The simplest NPTH script that can be written may look like this
 MyRect : create Rectangle
 ```
 
-This draws a **rectangle**. The rectangle is drawn on a canvas. The canvas is an area where drawings are drawn.
+First it need to write the parser rules for the grammar. Here the grammar starts with `program`. Here `program` is the startRuleName.
+The parser rule is following bellow:
 
-> **_NOTE:_** We have not specified anything about the size of the canvas, nor about where the rectangle will be drawn in the canvas or what shape, color the rectangle will take. This are all defaults that comes from a default Theme.
+````
+program     : statement* ;
+statement   : NAME COLON  ACTION  SHAPE  ; 
+````
 
-Back to the simplest code above. NPTH is a simple language where each line is interpreted individually and in the order they appear.
+The statement consists of name of the shape-object, a colon, an action and the shape of the object. So, "NAME" is a lexical keyword which will tokenize the name of the shape-object. "COLON" is for ':', "ACTION" token stands for the action we want to take for the shape-object. It can be create, move, delete.
 
-Each line may take only one of a few defined forms. In this case the form is
+The lexical rules for the grammar :
+````
+COLON       : ':';                        
+NAME        : [A-Z][a-zA-Z]*;             
+ACTION      : 'create' |'delete' | 'move';               
+SHAPE       : 'Rectangle' | 'Circle' | 'Square' | 'Elipse' | 'Diamond';  
+WS          : [ \t\r\n]+ -> skip; 
+````
+
+Lastly, the general syntax will be :
 
 > *object_name* : `action` `object_type`
 
