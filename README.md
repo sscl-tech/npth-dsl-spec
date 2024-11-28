@@ -25,6 +25,10 @@ WS          : [ \t\r\n]+ -> skip;
 ````
 >The lexer rules will tokenize the DSL and generate a stream of tokens. The token stream will go to the parser, and they will match the grammar that are defined in the parse rules and make a parse tree if all the syntax are correct.
 
+>The parse will look like
+![parseTree](https://github.com/user-attachments/assets/e44caa44-8290-4a91-9ed9-7ca55bcd7924)
+
+
 Lastly, the general syntax will be :
 
 > *object_name* : `action` `object_type`
