@@ -1,4 +1,4 @@
-# NPTH DSL spec
+# Version-01 of NPTH Script
 The simplest NPTH script that can be written may look like this
 
 ```
