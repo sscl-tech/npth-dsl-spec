@@ -1,0 +1,7 @@
+[
+  {
+    "name": "MyRect",
+    "action": "create",
+    "shape": "Rectangle"
+  }
+]
