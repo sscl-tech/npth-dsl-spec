@@ -1,0 +1,6 @@
+COLON=1
+NAME=2
+ACTION=3
+SHAPE=4
+WS=5
+':'=1
