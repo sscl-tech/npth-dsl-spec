@@ -78,10 +78,10 @@ In this step, a java class ASTtoJSON is made.This class generated a "output.json
 The JSON file is manipulated by JavaScript and an HTML file is made to show the shape on the browser.
 
 
-## Challenge and  Solutions
+## Challenges and  Solutions
 It is a challenege to know whether the grammar has been written correctly or not. ANTLR plugin in IntelliJ makes the process very easy. Anyone can view the parse tree in the ANTLR preview of IntelliJ
 
-## Result
+## Results
 The parse tree looks like 
 
 ![parseTree](https://github.com/user-attachments/assets/c5e807e5-72c1-47ce-9e6a-42dd1e43f522)
