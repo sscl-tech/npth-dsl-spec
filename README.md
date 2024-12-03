@@ -42,7 +42,9 @@ WS          : [ \t\r\n]+ -> skip;        // Skip spaces, tabs, and newlines
 
 // Parser rules
 
-program     : statement* ;                // The program consists of zero or more statements
+program     : statements ;              // The program consists of zero or more statements
+
+statements : statement* ;
 
 statement   : NAME COLON  ACTION  SHAPE  ;
 ```
